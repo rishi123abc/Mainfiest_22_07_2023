@@ -3,8 +3,16 @@ kind: Pod
 metadata:
   name: hello-pod
 spec:
- containers:
-  - name: containerx
-    image: nginx
-    ports:
-   - containerPort: 80
+  replicas: 4
+  selector:
+    app: rishijavaapp
+  template:
+    metadata:
+      labels:
+        app: rishijavaaap
+    spec:
+      containers:
+      - name: containerx
+        image: nginx
+        ports:
+      - containerPort: 80
