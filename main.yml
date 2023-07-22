@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: hello-pod
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     app: rishijavaapp
   template:
